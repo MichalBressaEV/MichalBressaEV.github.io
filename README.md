@@ -1,5 +1,7 @@
 # Pokemon cards app
 
+Run "npm i" to install packages, then run "npm run dev" to run locally.
+
 Use the input field to look up pokemons you would like to add to your collection.
 You can use both numbers (as pokemon IDs) or names (_names autocomplete is in progress_).
 

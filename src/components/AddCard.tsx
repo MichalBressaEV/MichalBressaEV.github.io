@@ -18,6 +18,7 @@ export const AddCard = ({ onAdd }: Props) => {
       <input
         onChange={(e) => setInputValue(e.target.value)}
         value={inputValue}
+        className="input-text"
       ></input>
       <Button onClick={addCard} />
     </div>

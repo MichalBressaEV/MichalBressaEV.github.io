@@ -1,3 +1,69 @@
+*{
+  font-family: "Flexo-Regular", arial, sans-serif;
+}
+
+html {
+  background-image: url(assets/backgroundImage.jpeg);
+}
+
+body{
+  width: 65%;
+  border-radius: 20px;;
+  margin: auto;
+  background-color: rgba(233, 233, 233, 0.8);
+  padding-bottom: 8vh;
+}
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 30px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+.input-text {
+  min-height: 16px;
+  padding: 10px 12px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.006) 1px 2px 4px;
+  font-size: 18px;
+  box-sizing: border-box;
+  vertical-align: middle;
+
+}
+
 .card {
   border: 1px solid rgb(73, 73, 73);
   border-radius: 10px;
@@ -6,6 +72,7 @@
   margin: 10px;
   text-align: center;
   max-width: 250px;
+  background-color: white;
 }
 
 .card .card-image {
@@ -29,6 +96,15 @@
   width: 50%;
   margin: 10px auto;
   text-align: center;
+}
+
+header h1 {
+  font-size: 45px;
+  margin-bottom: -10px;
+}
+
+header h3 {
+  font-size: 28px;
 }
 
 .cards-container {
@@ -86,6 +162,7 @@
 .types_container span {
   padding: 5px;
   margin: 0 4px;
+  
 }
 
 .normal {
@@ -93,6 +170,8 @@
   border: 1px solid #A8A77A;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
+
 }
 
 .fire {
@@ -100,6 +179,8 @@
   border: 1px solid #EE8130;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
+
 }
 
 .water {
@@ -107,6 +188,7 @@
   border: 1px solid #6390F0;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .grass {
@@ -114,6 +196,7 @@
   border: 1px solid #7AC74C;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .flying {
@@ -121,6 +204,7 @@
   border: 1px solid #A98FF3;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .fighting {
@@ -128,6 +212,7 @@
   border: 1px solid #C22E28;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .poison {
@@ -135,6 +220,7 @@
   border: 1px solid #A33EA1;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .electric {
@@ -142,6 +228,7 @@
   border: 1px solid #F7D02C;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .ground {
@@ -149,6 +236,7 @@
   border: 1px solid #E2BF65;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .rock {
@@ -156,6 +244,7 @@
   border: 1px solid #B6A136;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .psychic {
@@ -163,6 +252,7 @@
   border: 1px solid #F95587;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .ice {
@@ -170,6 +260,7 @@
   border: 1px solid #96D9D6;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .bug {
@@ -177,6 +268,7 @@
   border: 1px solid #A6B91A;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .ghost {
@@ -184,6 +276,7 @@
   border: 1px solid #735797;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .steel {
@@ -191,6 +284,7 @@
   border: 1px solid #B7B7CE;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 
 .dragon {
@@ -198,6 +292,7 @@
   border: 1px solid #6F35FC;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .dark {
@@ -205,6 +300,7 @@
   border: 1px solid #705746;
   border-radius: 5px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .fairy {
@@ -212,9 +308,10 @@
   border: 1px solid #D685AD;
   border-radius: 5px;
   color: #000000;
+  cursor: pointer;
 }
 .filters_container{
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
