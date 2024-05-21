@@ -3,6 +3,7 @@ import { AddCard } from "./components/AddCard";
 import { Header } from "./components/Header";
 import { Card } from "./components/Card";
 import { useEffect, useState } from "react";
+import { CircularProgress } from "@mui/material";
 
 interface PokemonCard {
   name: string;
@@ -127,13 +128,7 @@ export default function App() {
       <div className="header-container">
         <Header />
         <AddCard onAdd={addCard} />
-        {isLoading && (
-          <div className="lds-facebook">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        )}
+        {isLoading && <CircularProgress color="success" sx={{ mt: 3 }} />}
       </div>
       <div className="filters_container">
         {pokemonTypes.map((item) => (

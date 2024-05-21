@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { TriggerButton } from "./TriggerButton";
 import { useState } from "react";
 
 type Props = {
@@ -20,7 +20,7 @@ export const AddCard = ({ onAdd }: Props) => {
         value={inputValue}
         className="input-text"
       ></input>
-      <Button onClick={addCard} />
+      <TriggerButton onClick={addCard} />
     </div>
   );
 };

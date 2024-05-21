@@ -4,6 +4,7 @@
 
 html {
   background-image: url(assets/backgroundImage.jpeg);
+  
 }
 
 body{
@@ -14,54 +15,16 @@ body{
   padding-bottom: 8vh;
 }
 
-/* CSS */
-.button-24 {
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 30px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-.button-24:hover,
-.button-24:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
-}
-
-.button-24:active {
-  opacity: .5;
-}
-
 .input-text {
   min-height: 16px;
   padding: 10px 12px;
   border: 1px solid black;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.006) 1px 2px 4px;
-  font-size: 18px;
+  font-size: 14px;
   box-sizing: border-box;
   vertical-align: middle;
-
+  margin-right: 4px;
 }
 
 .card {
