@@ -1,3 +1,15 @@
+
+$cardColor: white;
+$headerTextColor: black;
+$typeColor: white;
+
+
+[data-theme="dark"] {
+  $cardColor: rgb(85, 85, 85);
+  $headerTextColor: rgb(255, 255, 255);
+  $typeColor: black;
+}
+
 *{
   font-family: "Flexo-Regular", arial, sans-serif;
 }
@@ -35,23 +47,22 @@ body{
   margin: 10px;
   text-align: center;
   max-width: 250px;
-  background-color: white;
-}
+  background-color: $cardColor;
+  .card-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 15px;
+  }
 
-.card .card-image {
-  max-width: 60%;
-  height: auto;
-  border-radius: 15px;
-}
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
 
-.card h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.card p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(90, 90, 90);
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(90, 90, 90);
+  }
 }
 
 .header-container{
@@ -59,6 +70,7 @@ body{
   width: 50%;
   margin: 10px auto;
   text-align: center;
+  color: $headerTextColor;
 }
 
 header h1 {
@@ -77,51 +89,6 @@ header h3 {
   justify-content: center;
 }
 
-
-.lds-facebook,
-.lds-facebook div {
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
-}
-.lds-facebook {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-facebook div {
-  display: inline-block;
-  position: absolute;
-  left: 8px;
-  width: 16px;
-  background: currentColor;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-}
-.lds-facebook div:nth-child(1) {
-  left: 8px;
-  animation-delay: -0.24s;
-}
-.lds-facebook div:nth-child(2) {
-  left: 32px;
-  animation-delay: -0.12s;
-}
-.lds-facebook div:nth-child(3) {
-  left: 56px;
-  animation-delay: 0s;
-}
-@keyframes lds-facebook {
-  0% {
-    top: 8px;
-    height: 64px;
-  }
-  50%, 100% {
-    top: 24px;
-    height: 32px;
-  }
-}
-
 .types_container span {
   padding: 5px;
   margin: 0 4px;
@@ -132,8 +99,8 @@ header h3 {
   background-color: #A8A77A;
   border: 1px solid #A8A77A;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 
 }
 
@@ -141,8 +108,8 @@ header h3 {
   background-color: #EE8130;
   border: 1px solid #EE8130;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 
 }
 
@@ -150,135 +117,145 @@ header h3 {
   background-color: #6390F0;
   border: 1px solid #6390F0;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .grass {
   background-color: #7AC74C;
   border: 1px solid #7AC74C;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
+  
 }
 
 .flying {
   background-color: #A98FF3;
   border: 1px solid #A98FF3;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .fighting {
   background-color: #C22E28;
   border: 1px solid #C22E28;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .poison {
   background-color: #A33EA1;
   border: 1px solid #A33EA1;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .electric {
   background-color: #F7D02C;
   border: 1px solid #F7D02C;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .ground {
   background-color: #E2BF65;
   border: 1px solid #E2BF65;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .rock {
   background-color: #B6A136;
   border: 1px solid #B6A136;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .psychic {
   background-color: #F95587;
   border: 1px solid #F95587;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .ice {
   background-color: #96D9D6;
   border: 1px solid #96D9D6;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .bug {
   background-color: #A6B91A;
   border: 1px solid #A6B91A;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .ghost {
   background-color: #735797;
   border: 1px solid #735797;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .steel {
   background-color: #B7B7CE;
   border: 1px solid #B7B7CE;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .dragon {
   background-color: #6F35FC;
   border: 1px solid #6F35FC;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .dark {
   background-color: #705746;
   border: 1px solid #705746;
   border-radius: 5px;
-  color: #FFFFFF;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 
 .fairy {
   background-color: #D685AD;
   border: 1px solid #D685AD;
   border-radius: 5px;
-  color: #000000;
-  cursor: pointer;
+  color: $typeColor;
+  
 }
 .filters_container{
   width: 100%;
   margin: auto;
   text-align: center;
+  button {
+    padding: 5px;
+    margin: 3px 3px;
+   font-size: 18px;
+   cursor: pointer;
+
+  }
 }
-.filters_container button {
-  padding: 5px;
-  margin: 3px 3px;
+
+.darkModeToggle {
+  position: absolute;
+  left: 19vw;
+  top: 5vh;
 }

@@ -50,6 +50,7 @@ export default function App() {
   const [cardList, setCardList] = useState<PokemonCard[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [filter, setFilter] = useState<PokemonType>("X");
+  const [darkMode, setDarkMode] = useState(false);
 
   const pokemonTypes: PokemonType[] = [
     "X",
@@ -107,13 +108,15 @@ export default function App() {
       //console.log("pokemon card");
 
       setCardList([...cardList, pokemonCard]);
-      console.log(cardList);
+      //console.log(cardList);
     } catch (error) {
       setIsLoading(false);
       alert("Couldn't fetch the pokemon, sorry!");
       console.error(error);
     }
   };
+
+  console.log(darkMode);
 
   const checkForType = (types: TypeSlot[]) => {
     if (filter === "X") return true;
@@ -124,8 +127,14 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className="app" data-theme={darkMode ? "dark" : "light"}>
       <div className="header-container">
+        <button
+          className="darkModeToggle"
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          Dark Mode
+        </button>
         <Header />
         <AddCard onAdd={addCard} />
         {isLoading && <CircularProgress color="success" sx={{ mt: 3 }} />}
@@ -154,6 +163,6 @@ export default function App() {
             )
         )}
       </div>
-    </>
+    </div>
   );
 }

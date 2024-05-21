@@ -30,7 +30,9 @@ export const Card = (props: Props) => {
       </p>
       <p className="types_container">
         {props.types.map((item) => (
-          <span className={item.type.name}>{item.type.name}</span>
+          <span className={item.type.name} key={item.type.name}>
+            {item.type.name}
+          </span>
         ))}
       </p>
     </div>
