@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Card } from "./components/Card";
 import { useEffect, useState } from "react";
 import { CircularProgress } from "@mui/material";
+import "./index.scss";
 
 interface PokemonCard {
   name: string;
@@ -78,6 +79,27 @@ export default function App() {
     console.log(cardList);
   }, [cardList]);
 
+  useEffect(() => {
+    // Accessing scss variable "--background-color"
+    // and "--text-color" using plain JavaScript
+    // and changing the same according to the state of "darkTheme"
+
+    const root = document.documentElement;
+    root?.style.setProperty(
+      "--cardColor",
+      darkMode ? "rgb(85, 85, 85)" : "white"
+    );
+    root?.style.setProperty(
+      "--headerTextColor",
+      darkMode ? "rgb(255, 255, 255)" : "black"
+    );
+    root?.style.setProperty("--typeColor", darkMode ? "white" : "black");
+    root?.style.setProperty(
+      "--backgoundColor",
+      darkMode ? "black" : "rgba(233, 233, 233, 0.8)"
+    );
+  }, [darkMode]);
+
   const addCard = async (input: string) => {
     try {
       if (!Number(input)) {
@@ -116,8 +138,6 @@ export default function App() {
     }
   };
 
-  console.log(darkMode);
-
   const checkForType = (types: TypeSlot[]) => {
     if (filter === "X") return true;
     for (let i = 0; i < types.length; i++) {
@@ -127,11 +147,14 @@ export default function App() {
   };
 
   return (
-    <div className="app" data-theme={darkMode ? "dark" : "light"}>
+    <div className="app">
       <div className="header-container">
         <button
           className="darkModeToggle"
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={() => {
+            setDarkMode(!darkMode);
+            console.log(darkMode);
+          }}
         >
           Dark Mode
         </button>
